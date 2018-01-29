@@ -25,11 +25,15 @@ int main(int ac, char **av)
 				exit (0);
 			if (stack.len_a > 1 && stack.len_a <= 3)
 				sort_three(&stack);
-			else if (stack.len_a > 3)
+			else if (stack.len_a > 3 && stack.len_a <= 5)
 				sort_five(&stack);
+			else if (stack.len_a > 5)
+				sort_hundred(&stack);
 			else
 				exit(0);
 		}
+		else if (assign_array(av, ac, &stack) == 0)
+			ft_putendl("Error");
 		free(stack.array_a);
 		free(stack.array_b);
 	}

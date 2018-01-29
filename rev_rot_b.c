@@ -18,7 +18,7 @@ int		rev_rot_b(t_stacks *stack)
 	int tmp;
 
 	i = stack->len_b;
-	if (stack->len_b > 1)
+	if (stack->len_b >= 0)
 	{
 		if (stack->len_b <= 1)
 			return (1);

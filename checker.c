@@ -14,7 +14,6 @@
 
 static void valid_moves(t_stacks *stack)
 {
-	print_stack(stack);
 	ft_putstr("sb  :");
 	ft_putendl(ft_itoa(sb_condition(stack))) ;
 	ft_putstr("rb  :");
@@ -31,6 +30,7 @@ static void valid_moves(t_stacks *stack)
 	ft_putendl(ft_itoa(pb_condition(stack))) ;
 	ft_putstr("pa  :");
 	ft_putendl(ft_itoa(pa_condition(stack))) ;
+	print_stack(stack);
 }
 
 static int			swap(char	*instruct, t_stacks *stack)

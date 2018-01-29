@@ -20,6 +20,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
+#include <limits.h>
 
 # define	BUFF_SIZE 1
 # define	MAX_FD 1024
@@ -48,7 +49,7 @@ void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 int					ft_isalnum(int ch);
 int					ft_isascii(int ch);
 int					ft_escape(int ch);
-int					ft_atoi(const char *str);
+long long			ft_atoi(const char *str);
 char				*ft_strdup(const char *str);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t				ft_strlcat(char *src, const char *dst, size_t dstsize);

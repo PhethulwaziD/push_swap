@@ -14,9 +14,6 @@
 # define PUSH_SWAP_H
 # include "./libft/libft.h"
 
-# define MAX_INT 2147483647
-# define MIN_INT -2147483647
-
 typedef	struct s_stacks
 {
 	int	*array_a;
@@ -54,5 +51,6 @@ void		print_stack(t_stacks *stack);
 void		sort_three(t_stacks *stack);
 int			biggest(t_stacks *stack);
 void		sort_five(t_stacks *stack);
+void		sort_hundred(t_stacks *stack);
 int			smallest(t_stacks *stack);
 #endif

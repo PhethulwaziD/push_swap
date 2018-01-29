@@ -45,7 +45,8 @@ static int		rotate_stack(t_stacks *stack)
 	i = 0;
 	while (i++ < half_length(stack))
 		if (stack->array_a[i] < stack->array_a[i - 1])
-			return (1);
+			if (position(stack) == 1)
+				return (1);
 	return (0);
 }
 

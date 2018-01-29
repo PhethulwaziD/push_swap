@@ -12,34 +12,32 @@
 
 #include "push_swap.h"
 
-int			assign_array(char **av, int ac, t_stacks *stack)
+int assign_array(char **av, int ac, t_stacks *stack)
 {
-	int		i;
-	int		j;
+    int             i;
+    int             j;
+    long long 		val;
 
-	i = 0;	
-	j = 0;
-	stack->top_a = &stack->array_a[0];
-	stack->top_b = &stack->array_b[0];
-	stack->len_a = 0;
-	stack->len_b = 0;
-	while (i++ < ac)
-	{
-		if (ft_isint(av[ac]) == 0)
-			return (0);
-		stack->array_a[j] = ft_atoi(av[i]);
-		j++;
-	}
-	stack->len_a = j;
-	i = 0;
-	while (i < stack->len_a)
-	{
-		if (stack->array_a[i] > MAX_INT || stack->array_a[i] < MIN_INT)
-			return (0);
-		i++;
-	}
-	stack->len_b = 0;
-	if (check_repeat(stack) == 0)
-		return (0);
-	return (1);
+    i = 0;
+    j = 0;
+    val = 0;
+    stack->top_a = &stack->array_a[0];
+    stack->top_b = &stack->array_b[0];
+    stack->len_a = 0;
+    stack->len_b = 0;
+    while (i++ < ac)
+    {
+        if (ft_isint(av[i]) == 0)
+                return (0);
+        val = ft_atoi(av[i]);
+        if (val > INT_MAX || val < INT_MIN)
+            return (0);
+        stack->array_a[j] = val;
+        j++;
+    }
+    stack->len_a = j;
+    stack->len_b = 0;
+    if (check_repeat(stack) == 0)
+            return (0);
+    return (1);
 }
