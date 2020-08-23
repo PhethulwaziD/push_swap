@@ -27,8 +27,10 @@ int main(int ac, char **av)
 				sort_three(&stack);
 			else if (stack.len_a > 3 && stack.len_a <= 5)
 				sort_five(&stack);
-			else if (stack.len_a > 5)
+			else if (stack.len_a > 5 && stack.len_a < 100)
 				sort_hundred(&stack);
+			else if (stack.len_a >= 100)
+				five_hundred_sort(&stack);
 			else
 				exit(0);
 		}

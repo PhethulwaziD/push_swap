@@ -35,6 +35,7 @@ static void valid_moves(t_stacks *stack)
 
 static int			swap(char	*instruct, t_stacks *stack)
 {
+	valid_moves(stack);
 	if (ft_strequ("sa", instruct) == 1)
 		return (swap_a(stack));
 	else if (ft_strequ("sb", instruct) == 1)

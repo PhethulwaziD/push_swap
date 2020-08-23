@@ -52,5 +52,7 @@ void		sort_three(t_stacks *stack);
 int			biggest(t_stacks *stack);
 void		sort_five(t_stacks *stack);
 void		sort_hundred(t_stacks *stack);
+void		five_hundred_sort(t_stacks *stack);
 int			smallest(t_stacks *stack);
+int			sort_b(t_stacks *stack);
 #endif
