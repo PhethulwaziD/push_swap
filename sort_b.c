@@ -59,7 +59,7 @@ static int	rb_condition_one(t_stacks *stack)
 			i = 0;
 			while (i < stack->len_b)
 			{
-				if (big_stack_b(stack) == stack->array_b[i] && i < half_length(stack))
+				if (big_stack_b(stack) == stack->array_b[i] && i < half_length(stack) + 1)
 					return (1);
 				if (big_stack_b(stack) == stack->array_b[i] && i > half_length(stack))
 					return (2);
@@ -72,7 +72,7 @@ static int	rb_condition_one(t_stacks *stack)
 			i = 0;
 			while (i < stack->len_b)
 			{
-				if (small_stack_b(stack) == stack->array_b[i] && i < half_length(stack))
+				if (small_stack_b(stack) == stack->array_b[i] && i < half_length(stack) + 1)
 					return (1);
 				if (small_stack_b(stack) == stack->array_b[i] && i > half_length(stack))
 					return (2);

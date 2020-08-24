@@ -195,7 +195,7 @@ void		five_hundred_sort(t_stacks *stack)
 	int		len;
 
 	lst_a = stack->len_a - 1;
-	len = 15;
+	len = 17;
 	if (stack->len_a <= 100)
 		len = 10;
 	while (stack->len_a > 0)
